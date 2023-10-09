@@ -12,7 +12,7 @@ This Express.js middleware enforces rate limits for specified route templates ba
 - If the limit is exceeded (empty bucket), the request is rejected. Responds with 0 remaining tokens and an "allowed" status of false.
 
 ## Compromises and Possible Improvements
-In-Memory Storage: Token buckets are stored in memory, which means they will be reset upon server restart. Consider using a persistent storage solution for long-term rate limit tracking.
+- In-Memory Storage: Token buckets are stored in memory, which means they will be reset upon server restart. Consider using a persistent storage solution for long-term rate limit tracking.
 
 - Single Endpoint: The rate limiting is applied uniformly to all routes specified in the config.json file. For more granular control, additional logic could be added to handle different routes differently.
 
