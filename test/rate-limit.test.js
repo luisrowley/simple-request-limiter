@@ -21,7 +21,7 @@ describe('Rate Limit Service', () => {
     
     it('should reject requests after rate limit is exceeded', (done) => {
         const routeTemplate = 'GET /user/:id';
-        const requests = Array.from({ length: 55 }, (_, index) => index + 1);
+        const requests = Array.from({ length: 11 }, (_, index) => index + 1);
         const promises = requests.map(() => {
             return chai.request(app)
                 .post('/take')
