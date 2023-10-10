@@ -14,8 +14,6 @@ This Express.js middleware enforces rate limits for specified route templates ba
 ## Compromises and Possible Improvements
 - In-Memory Storage: Token buckets are stored in memory, which means they will be reset upon server restart. Consider using a persistent storage solution for long-term rate limit tracking.
 
-- Single Endpoint: The rate limiting is applied uniformly to all routes specified in the config.json file. For more granular control, additional logic could be added to handle different routes differently.
-
 - Scalability: This implementation might not scale well for extremely high loads. Consider distributed rate limiting solutions or caching mechanisms for scalability.
 
 - Logging and Metrics: Consider adding logging to track rate limit usage and metrics for monitoring and analysis purposes.
