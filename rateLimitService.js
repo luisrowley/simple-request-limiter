@@ -48,7 +48,7 @@ app.post('/take', (req, res) => {
                 allowed: true
             });
         } else {
-            return res.status(200).json({
+            return res.status(429).json({
                 remainingTokens: 0,
                 allowed: false
             });

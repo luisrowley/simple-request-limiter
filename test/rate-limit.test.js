@@ -37,7 +37,7 @@ describe('Rate Limit Service', () => {
                     expect(responses[i].body).to.have.property('allowed').to.be.true;
                 }
                 // remaining tokens: 0
-                expect(responses[10]).to.have.status(200);
+                expect(responses[10]).to.have.status(429);
                 expect(responses[10].body).to.have.property('remainingTokens').to.equal(0);
                 expect(responses[10].body).to.have.property('allowed').to.be.false;
                 done();
