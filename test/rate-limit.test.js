@@ -56,4 +56,16 @@ describe('Rate Limit Service', () => {
                 done();
             });
     });
+
+    it('should return 404 for unknown routeKey', (done) => {
+        chai.request(app)
+            .post('/take')
+            .send({ routeKey: 'GET /nonexistent' })
+            .end((err, res) => {
+                expect(res).to.have.status(404);
+                expect(res.body).to.have.property('error');
+                done();
+            });
+    });
+    
 });

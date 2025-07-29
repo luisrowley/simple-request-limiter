@@ -48,6 +48,10 @@ class RateLimiter {
       }
       return bucket.consume();
     }
+
+    has(endpoint) {
+        return this.buckets.has(endpoint);
+    }
 }
   
 module.exports = new RateLimiter();
