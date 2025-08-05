@@ -1,5 +1,3 @@
-// limiter.js
-
 class TokenBucket {
     constructor(burst, sustainedPerMin) {
       this.capacity = burst;

@@ -16,7 +16,7 @@ app.post('/take', (req, res) => {
   
   // error handling
   if (!routeKey) {
-    return res.status(400).json({ error: 'Missung routeKey' });
+    return res.status(400).json({ error: 'Missing routeKey' });
   }
   
   if (!rateLimiter.has(routeKey)) {
