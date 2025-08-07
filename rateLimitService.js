@@ -30,8 +30,7 @@ app.post('/take', (req, res) => {
     return res.status(429).json({
       accepted: false,
       remaining: 0,
-      message: 'Rate limit exceeded. Try again later.',
-      config: config
+      message: 'Rate limit exceeded. Try again later.'
     });
   }
   
